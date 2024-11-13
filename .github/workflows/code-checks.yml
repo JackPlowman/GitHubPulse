@@ -1,0 +1,32 @@
+name: "Code Checks"
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+
+permissions:
+  contents: read
+  packages: read
+  statuses: write
+
+jobs:
+  check-swift-lint:
+    runs-on: macos-15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.2.2
+        with:
+          fetch-depth: 0
+      - name: Run SwiftLint
+        run: 
+  check-swift-format:
+    runs-on: macos-15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.2.2
+        with:
+          fetch-depth: 0
+      - name: Run SwiftFormat
+        run: xcrun swift-format format . --parallel --recursive --in-place
