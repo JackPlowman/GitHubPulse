@@ -21,7 +21,7 @@ Add this line if you want to avoid checking in source code from Swift Package Ma
 Packages/
 Package.pins
 Package.resolved
-*.xcodeproj
+GitHubPulse.xcodeproj/project.xcworkspace
 
 # Xcode automatically generates this directory with a .xcworkspacedata file and xcuserdata
 # hence it is not needed unless you have added a package configuration file to your project
@@ -58,3 +58,5 @@ fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots/**/*.png
 fastlane/test_output
+
+!GitHubPulse.xcodeproj/project.pbxproj
