@@ -7,18 +7,19 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct RSSFeedView: View {
+    @State private var feedItems: [String] = ["Item 1", "Item 2", "Item 3"]
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationView {
+            List(feedItems, id: \.self) { item in
+                Text(item)
+            }
+            .navigationTitle("GitHub Pulse")
         }
-        .padding()
     }
 }
 
 #Preview {
-    ContentView()
+    RSSFeedView()
 }
