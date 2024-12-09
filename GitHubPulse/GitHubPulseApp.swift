@@ -2,7 +2,7 @@
 //  GitHubPulseApp.swift
 //  GitHubPulse
 //
-//  Created by Jack Plowman on 10/11/2024.
+//  Created by Jack Plowman on 09/12/2024.
 //
 
 import SwiftUI
