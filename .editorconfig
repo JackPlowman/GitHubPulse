@@ -10,10 +10,3 @@ trim_trailing_whitespace = true
 
 [*.md]
 indent_size = unset
-
-[*/*.entitlements]
-indent_size = unset
-
-[*.xcodeproj/project.pbxproj]
-indent_size = unset
-

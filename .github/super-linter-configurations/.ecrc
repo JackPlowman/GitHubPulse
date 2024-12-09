@@ -5,7 +5,11 @@
   "IgnoreDefaults": false,
   "SpacesAftertabs": false,
   "NoColor": false,
-  "exclude": [],
+  "exclude": [
+    "GitHubPulse/GitHubPulse.entitlements",
+    "GitHubPulse.xcodeproj/project.pbxproj"
+  ],
   "AllowedContentTypes": [],
   "PassedFiles": []
 }
+p
