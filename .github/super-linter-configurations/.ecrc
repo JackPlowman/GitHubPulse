@@ -1,0 +1,14 @@
+
+{
+  "Verbose": false,
+  "Debug": false,
+  "IgnoreDefaults": false,
+  "SpacesAftertabs": false,
+  "NoColor": false,
+  "exclude": [
+    "GitHubPulse.entitlements",
+    "project.pbxproj"
+  ],
+  "AllowedContentTypes": [],
+  "PassedFiles": []
+}
