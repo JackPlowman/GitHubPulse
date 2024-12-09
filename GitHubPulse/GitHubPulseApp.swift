@@ -11,7 +11,7 @@ import SwiftUI
 struct GitHubPulseApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RSSFeedView()
         }
     }
 }
