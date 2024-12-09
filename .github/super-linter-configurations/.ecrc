@@ -6,10 +6,9 @@
   "SpacesAftertabs": false,
   "NoColor": false,
   "exclude": [
-    "GitHubPulse/GitHubPulse.entitlements",
-    "GitHubPulse.xcodeproj/project.pbxproj"
+    "GitHubPulse.entitlements",
+    "project.pbxproj"
   ],
   "AllowedContentTypes": [],
   "PassedFiles": []
 }
-p
