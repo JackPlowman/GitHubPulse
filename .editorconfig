@@ -11,8 +11,9 @@ trim_trailing_whitespace = true
 [*.md]
 indent_size = unset
 
-[GitHubPulse/GitHubPulse.entitlements]
+[*/*.entitlements]
 indent_size = unset
 
-[GitHubPulse.xcodeproj/project.pbxproj]
+[*.xcodeproj/project.pbxproj]
 indent_size = unset
+
