@@ -55,16 +55,16 @@ jobs:
           fail_on_error: true
           filter_mode: nofilter
 
-      run-codeql-analysis:
-        name: CodeQL Analysis
-        runs-on: ubuntu-latest
-        steps:
-          - name: Checkout repository
-            uses: actions/checkout@v4.2.2
-          - name: Initialize CodeQL
-            uses: github/codeql-action/init@v3.27.5
-            with:
-              languages: swift
-              queries: security-and-quality
-          - name: Perform CodeQL Analysis
-            uses: github/codeql-action/analyze@v3.27.5
+  run-codeql-analysis:
+    name: CodeQL Analysis
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4.2.2
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v3.27.5
+        with:
+          languages: swift
+          queries: security-and-quality
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v3.27.5
