@@ -66,5 +66,6 @@ jobs:
         with:
           languages: swift
           queries: security-and-quality
+          build-mode: autobuild
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v3.27.5
