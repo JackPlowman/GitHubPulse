@@ -79,3 +79,21 @@ jobs:
         with:
           sarif_file: results.sarif
           category: zizmor
+
+  run-codeql-analysis:
+    name: CodeQL Analysis
+    runs-on: macos-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4.2.2
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v3.28.0
+        with:
+          languages: swift
+          queries: security-and-quality
+          build-mode: autobuild
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v3.28.0
