@@ -22,7 +22,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: Lint Code Base
-        uses: super-linter/super-linter/slim@v7.2.0
+        uses: super-linter/super-linter/slim@v7.2.1
         env:
           VALIDATE_ALL_CODEBASE: true
           DEFAULT_BRANCH: main
@@ -67,7 +67,7 @@ jobs:
           fetch-depth: 0
           persist-credentials: false
       - name: Install the latest version of uv
-        uses: astral-sh/setup-uv@v4.2.0
+        uses: astral-sh/setup-uv@v5.2.1
         with:
           version: "latest"
       - name: Run zizmor 🌈
@@ -75,7 +75,26 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Upload SARIF file
-        uses: github/codeql-action/upload-sarif@v3.27.9
+        uses: github/codeql-action/upload-sarif@v3.28.1
         with:
           sarif_file: results.sarif
           category: zizmor
+
+  run-codeql-analysis:
+    name: CodeQL Analysis
+    runs-on: ubuntu-latest
+    permissions:
+      security-events: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4.2.2
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v3.28.1
+        with:
+          languages: actions
+          queries: security-and-quality
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v3.28.1
