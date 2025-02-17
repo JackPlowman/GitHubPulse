@@ -17,7 +17,7 @@ updates:
           - "minor"
 
   - package-ecosystem: "swift"
-    directory: "/GitHubPulse.xcodeproj"
+    directory: "/GitHubPulse"
     schedule:
       interval: "weekly"
       day: "saturday"
