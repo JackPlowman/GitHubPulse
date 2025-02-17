@@ -9,11 +9,13 @@ on:
 
 permissions:
   contents: read
-  pull-requests: write
 
 jobs:
   configure-labels:
+    name: Configure Labels
     runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4.2.2
