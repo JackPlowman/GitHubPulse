@@ -11,13 +11,13 @@ on:
 permissions:
   contents: read
   packages: read
-  statuses: write
-  security-events: write
 
 jobs:
   check-code-quality:
     name: Check Code Quality
     runs-on: ubuntu-latest
+    permissions:
+      statuses: write
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4.2.2
