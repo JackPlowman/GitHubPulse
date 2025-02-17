@@ -17,7 +17,7 @@ updates:
           - "minor"
 
   - package-ecosystem: "swift"
-    directory: "/GitHubPulse"
+    directory: "/GitHubPulse/GitHubPulseApp.swift"
     schedule:
       interval: "weekly"
       day: "saturday"
