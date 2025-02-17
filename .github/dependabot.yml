@@ -15,19 +15,3 @@ updates:
         update-types:
           - "patch"
           - "minor"
-
-  - package-ecosystem: "swift"
-    directory: "/GitHubPulse/GitHubPulseApp.swift"
-    schedule:
-      interval: "weekly"
-      day: "saturday"
-      time: "01:00"
-      timezone: "Europe/London"
-    target-branch: "main"
-    groups:
-      swift:
-        patterns:
-          - "*"
-        update-types:
-          - "patch"
-          - "minor"
