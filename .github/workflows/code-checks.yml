@@ -59,6 +59,20 @@ jobs:
           fail_on_error: true
           filter_mode: nofilter
 
+  check-justfile-format:
+    name: Check Justfile Format
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4.2.2
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Set up Just
+        uses: extractions/setup-just@v2
+      - name: Check Justfile Format
+        run: just format-check
+
   run-zizmor:
     name: Check GitHub Actions with zizmor
     runs-on: ubuntu-latest
@@ -71,7 +85,7 @@ jobs:
           fetch-depth: 0
           persist-credentials: false
       - name: Install the latest version of uv
-        uses: astral-sh/setup-uv@v5.2.2
+        uses: astral-sh/setup-uv@v5.3.0
         with:
           version: "latest"
       - name: Run zizmor 🌈
@@ -79,7 +93,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Upload SARIF file
-        uses: github/codeql-action/upload-sarif@v3.28.9
+        uses: github/codeql-action/upload-sarif@v3.28.10
         with:
           sarif_file: results.sarif
           category: zizmor
@@ -96,10 +110,10 @@ jobs:
           fetch-depth: 0
           persist-credentials: false
       - name: Initialize CodeQL
-        uses: github/codeql-action/init@v3.28.9
+        uses: github/codeql-action/init@v3.28.10
         with:
           languages: actions
           queries: security-and-quality
           config-file: .github/other-configurations/codeql-config.yml
       - name: Perform CodeQL Analysis
-        uses: github/codeql-action/analyze@v3.28.9
+        uses: github/codeql-action/analyze@v3.28.10
