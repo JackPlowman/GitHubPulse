@@ -1,14 +1,10 @@
-
 {
   "Verbose": false,
   "Debug": false,
   "IgnoreDefaults": false,
   "SpacesAfterTabs": false,
   "NoColor": false,
-  "exclude": [
-    "GitHubPulse.entitlements",
-    "project.pbxproj"
-  ],
+  "exclude": ["GitHubPulse.entitlements", "project.pbxproj"],
   "AllowedContentTypes": [],
   "PassedFiles": []
 }
